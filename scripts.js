@@ -9,10 +9,12 @@ window.onload = function () {
   document.addEventListener("keydown", keyPush);
 
   // Define que chamará a função "game" a cada 60 ms
-  setInterval(game, 1000/15);
+  setInterval(game, 60);
 
+  // Velocidade da Snake
   const vel = 1;
 
+  // Variáveis responsáveis pela movimentação
   var velx = vely = 0;
   var pointx = 10;
   var pointy = 15;
@@ -40,7 +42,7 @@ window.onload = function () {
       pointy = 0;
     }
 
-    // Colore o plani de fundo do game
+    // Colore o plano de fundo do game
     context.fillStyle = "black";
     context.fillRect(0, 0, stage.width, stage.height);
 
